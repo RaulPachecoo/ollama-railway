@@ -1,2 +1,4 @@
 FROM ollama/ollama
-CMD ["ollama", "--help"]
+EXPOSE 11434
+ENTRYPOINT ["ollama"]
+CMD ["serve", "--host", "0.0.0.0", "--port", "11434"]
